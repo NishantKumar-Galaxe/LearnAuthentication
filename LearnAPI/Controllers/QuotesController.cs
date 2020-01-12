@@ -4,12 +4,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using LearnAPI.Data;
 using LearnAPI.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LearnAPI.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class QuotesController : ControllerBase
     {
